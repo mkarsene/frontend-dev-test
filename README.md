@@ -32,7 +32,7 @@ What are we looking for:
 
 ## Application
 
-The application on this link must be replicated as much as possible: `https://d2l5gumhi3yv72.cloudfront.net`. You can loging using the following credentials:
+The application on this link must be replicated as much as possible: `https://d2l5gumhi3yv72.cloudfront.net`. You can log in using the following credentials:
 
 - User: `Developer Test`
 - PIN: `1234`
