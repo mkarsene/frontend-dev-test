@@ -58,13 +58,14 @@ Fork this repository and submit a pull request. You can also send us a link to a
 
 ### Users API Documentation
 
+- Base Url: `https://bewty7mih9.execute-api.eu-central-1.amazonaws.com`
 - `Store ID`: `ea7aa965-bef1-4c38-b2b3-e62c865b5a7a`
 - `Roles`: `ADMIN`, `CASHIER`, `MANAGER`, `RECEIPT_CHECKER`, `WAITER`
 
 #### 1. Create a User
 
 - **Endpoint:** `POST /users`
-- **URL:** `https://bewty7mih9.execute-api.eu-central-1.amazonaws.com/users`
+- **URL:** `{baseUrl}/users`
 - **Request Body:**
   ```json
   {
@@ -81,7 +82,7 @@ Fork this repository and submit a pull request. You can also send us a link to a
 #### 2. Update User
 
 - **Endpoint:** `PUT /users`
-- **URL:** `https://bewty7mih9.execute-api.eu-central-1.amazonaws.com/users`
+- **URL:** `{baseUrl}/users`
 - **Request Body:**
   ```json
   {
@@ -100,7 +101,7 @@ Fork this repository and submit a pull request. You can also send us a link to a
 #### 3. Verify User
 
 - **Endpoint:** `POST /users/verify`
-- **URL:** `https://bewty7mih9.execute-api.eu-central-1.amazonaws.com/users/verify`
+- **URL:** `{baseUrl}/users/verify`
 - **Request Body:**
   ```json
   {
@@ -112,14 +113,14 @@ Fork this repository and submit a pull request. You can also send us a link to a
 #### 4. Get a User
 
 - **Endpoint:** `GET /users/{userId}`
-- **URL:** `https://bewty7mih9.execute-api.eu-central-1.amazonaws.com/users/{userId}`
+- **URL:** `{baseUrl}/users/{userId}`
 - **Path Params:**
   - `userId`: `some-user-id`
 
 #### 5. Get Users
 
 - **Endpoint:** `GET /users`
-- **URL:** `https://bewty7mih9.execute-api.eu-central-1.amazonaws.com/users`
+- **URL:** `{baseUrl}/users`
 - **Query Params:**
   - `store_id`: `some-store-id`
   - `limit`: `50`
