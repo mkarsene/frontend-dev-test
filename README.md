@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The purpose of this test is to evaluate your skills as a frontend developer. You will be asked to develop a small application that will be used to manage a list of users and to use a third party API to search for products.
+The purpose of this test is to evaluate your skills as a frontend developer. You will be asked to develop a small application that will be used to manage a list of users and to use a third party API to search for products. 
 
 ## Requirements
 
@@ -14,8 +14,6 @@ The purpose of this test is to evaluate your skills as a frontend developer. You
 - The application must be developed using React Router
 - The application must be developed using React Hooks
 - The application must be developed using Recoil for state management
-
-
 
 
 What are we looking for:
@@ -31,7 +29,7 @@ What are we looking for:
 - A good understanding of Chakra UI
 - Ability to integrate a third party API
 - Ability to explore an API and use it even though it is not documented well
-- Creativity
+- **Creativity**
 
 ## Application
 
@@ -51,6 +49,10 @@ You do not need to implement the following features:
 - The application must be developed using Recoil for state management
 - Creating or editing new users
 - Creating or editing thresholds
+
+## Submission
+
+Fork this repository and submit a pull request. You can also send us a link to a private repository. We will review your code and get back to you as soon as possible. We will not use your code for any other purpose than reviewing your skills. We will not share your code with anyone else.
 
 ## API
 
@@ -119,21 +121,21 @@ You do not need to implement the following features:
 - **Endpoint:** `GET /users`
 - **URL:** `https://bewty7mih9.execute-api.eu-central-1.amazonaws.com/users`
 - **Query Params:**
-  - `store_id`: `aaae5ce8-b72e-41d0-9222-3b19e14143da`
+  - `store_id`: `some-store-id`
   - `limit`: `50`
 
 ### Search API Documentation
 
 #### Search Products
 
-!This maybe the most challenging part of the test. You will use typesense to search. Below are some userful links:
+This maybe the most challenging part of the test. You will use typesense to search. Below are some userful links:
 
 - [Typesense Documentation](https://typesense.org/docs/0.25.1/api/)
 - [Youtube Video 1](https://www.youtube.com/watch?v=cIU19iA8I7U&ab_channel=ZaisteProgramming)
 - [Youtube Video 2](https://www.youtube.com/watch?v=iO0d_Ncjc7U&ab_channel=CoderOne)
 - [React Instant Search](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/react/?utm_source=instantsearch.js&utm_campaign=repository)
 
-For the product database you will use Typesense Cloud. !You do not need to setup your own server. You will use the following credentials:
+For the product database you will use Typesense Cloud. **You do not need to setup your own server**. You will use the following credentials:
 
 - `Search only API Key`: `leYaJxicJjyC6sIE8djLfSzHo3d5taRH`
 - `Host`: `5dbt14p7fze0l6sip-1.a1.typesense.net`
