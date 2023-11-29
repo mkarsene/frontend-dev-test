@@ -15,6 +15,9 @@ The purpose of this test is to evaluate your skills as a frontend developer. You
 - The application must be developed using React Hooks
 - The application must be developed using Recoil for state management
 
+
+
+
 What are we looking for:
 
 - A good understanding of the requirements
@@ -28,7 +31,7 @@ What are we looking for:
 - A good understanding of Chakra UI
 - Ability to integrate a third party API
 - Ability to explore an API and use it even though it is not documented well
-- !Creativity
+- Creativity
 
 ## Application
 
@@ -44,11 +47,16 @@ You do not need to implement the following features:
 - Creating or editing new users BUT you must be able to navigate to the page and see the form
 - Creating or editing thresholds BUT you must be able to navigate to the page and see the form
 
+### Bonus Points (Not required but a plus)
+- The application must be developed using Recoil for state management
+- Creating or editing new users
+- Creating or editing thresholds
+
 ## API
 
 ### Users API Documentation
 
-- `Store ID`: `aaae5ce8-b72e-41d0-9222-3b19e14143da`
+- `Store ID`: `ea7aa965-bef1-4c38-b2b3-e62c865b5a7a`
 - `Roles`: `ADMIN`, `CASHIER`, `MANAGER`, `RECEIPT_CHECKER`, `WAITER`
 
 #### 1. Create a User
