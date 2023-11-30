@@ -5,6 +5,7 @@ import {
   ChakraProvider,
   Box,
   theme,
+  Container,
 } from "@chakra-ui/react"
 // import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter";
@@ -56,7 +57,9 @@ export const App = () => (
     {/* <Dashboard /> */}
     <Box fontSize="xl">
       <InstantSearch indexName="loyverse-items-kuri" searchClient={typesenseInstantsearchAdapter.searchClient}>
+        <Container display="flex" justifyContent="center" alignItems="center" p="20px">
         <SearchBox />
+        </Container>
         <Hits hitComponent={Dashboard} />
       </InstantSearch>
     </Box>
