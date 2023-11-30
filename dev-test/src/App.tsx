@@ -4,17 +4,13 @@ import * as React from "react"
 import {
   ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
   theme,
 } from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+// import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter";
 import { Hits, InstantSearch, SearchBox } from 'react-instantsearch-dom'
+import Dashboard from "./pages/Dashboard";
+import Navbar from "./components/Navbar";
 
 const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   server: {
@@ -36,14 +32,34 @@ const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   },
 });
 
+export const Hit = ({ hit }) => {
+  console.log(hit)
+  return (
+    <div>
+      {hit.name}
+      <h1>
+        {hit.description}
+      </h1>
+      {hit.inventory
+      }
+     <p>
+     cost: {hit.cost
+      }
+     </p>
+    </div>
+  )
+}
+
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
+    <Navbar />
+    <Box fontSize="xl">
       <h1>hello</h1>
       <InstantSearch indexName="loyverse-items-kuri" searchClient={typesenseInstantsearchAdapter.searchClient}>
         <SearchBox />
-        <Hits />
+        <Hits hitComponent={Hit} />
       </InstantSearch>
+      <Dashboard />
     </Box>
   </ChakraProvider>
 )
