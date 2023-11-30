@@ -42,10 +42,10 @@ export const Hit = ({ hit }) => {
       </h1>
       {hit.inventory
       }
-     <p>
-     cost: {hit.cost
-      }
-     </p>
+      <p>
+        cost: {hit.cost
+        }
+      </p>
     </div>
   )
 }
@@ -53,13 +53,12 @@ export const Hit = ({ hit }) => {
 export const App = () => (
   <ChakraProvider theme={theme}>
     <Navbar />
+    {/* <Dashboard /> */}
     <Box fontSize="xl">
-      <h1>hello</h1>
       <InstantSearch indexName="loyverse-items-kuri" searchClient={typesenseInstantsearchAdapter.searchClient}>
         <SearchBox />
-        <Hits hitComponent={Hit} />
+        <Hits hitComponent={Dashboard} />
       </InstantSearch>
-      <Dashboard />
     </Box>
   </ChakraProvider>
 )
