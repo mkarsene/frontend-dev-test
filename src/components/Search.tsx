@@ -1,16 +1,23 @@
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
 import { searchClient } from '../services/product';
 import Products from './Products';
+import 'instantsearch.css/themes/satellite.css';
+import './styles/Search.css';
+import { Box } from '@chakra-ui/react';
 
 const Search = () => {
   return (
-    <InstantSearch
-      indexName="loyverse-items-kuri"
-      searchClient={searchClient}
-    >
-      <SearchBox />
-      <Hits hitComponent={Products} />
-    </InstantSearch>
+    <div className="search-card">
+      <InstantSearch
+        indexName="loyverse-items-kuri"
+        searchClient={searchClient}
+      >
+        <SearchBox />
+        <Box>
+          <Hits hitComponent={Products} />
+        </Box>
+      </InstantSearch>
+    </div>
   );
 };
 
