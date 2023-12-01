@@ -10,6 +10,7 @@ const Dashboard = ({ hit }: Props) => {
         <SimpleGrid p="10px" columns={4} spacing={10} minChildWidth="150px">
             <Box bg="white" >
                 <Card maxW='200px'>
+                    hello
                     <CardBody>
                         <Image
                             src={`https://dghhemym84nng.cloudfront.net/bofrak-uploads/${hit.sku}.png`}
