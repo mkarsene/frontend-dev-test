@@ -5,7 +5,7 @@ interface Props {
     hit: any
 }
 
-const Dashboard = ({ hit }: Props) => {
+const ListProducts = ({ hit }: Props) => {
     return (
         <SimpleGrid p="10px" columns={4} spacing={10} minChildWidth="150px">
             <Box bg="white" >
@@ -35,4 +35,4 @@ const Dashboard = ({ hit }: Props) => {
     )
 }
 
-export default Dashboard
+export default ListProducts

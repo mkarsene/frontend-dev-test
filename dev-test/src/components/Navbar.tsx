@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <Flex bg="gray.200" as="nav" p="10px" alignItems="center" gap="10px">
-      <Heading as="h1" color="blue"> Bofrak </Heading>
+      <Heading as="h1" color="blue"> <Link to={'/'}>
+        Bofrak
+      </Link></Heading>
       <Spacer />
       <Menu>
         <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
@@ -16,9 +18,11 @@ const Navbar = () => {
               Mange User
             </Link>
           </MenuItem>
-          <Link to={'/manage_thresholds'}>
-          Manage thresholds
+          <MenuItem>
+            <Link to={'/manage_thresholds'}>
+              Manage thresholds
             </Link>
+          </MenuItem>
         </MenuList>
       </Menu>
       <Button bg="black" color="white">Logout</Button>
