@@ -7,8 +7,6 @@ interface Props {
     hit: TypesenseItem,
 }
 
-
-
 const ListProducts = ({ hit }: Props) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const finalRef = React.useRef(null)
@@ -35,7 +33,6 @@ const ListProducts = ({ hit }: Props) => {
                                 <Heading fontSize='small'>Stock{hit.track_stock}</Heading>
                                 <Heading fontSize='small'>cost: K {hit.cost}</Heading>
                                 <Heading fontSize='small'>price: K{hit.price}</Heading>
-                                {/* <Text fontSize='small'>stock : {hit.stock}</Text> */}
                                 <Text fontSize='small'>available: {hit.is_available_for_sale}</Text>
                             </Stack>
                         </CardBody>
