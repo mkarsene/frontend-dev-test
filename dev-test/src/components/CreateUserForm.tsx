@@ -2,6 +2,7 @@ import { Box, Button, Card, CardBody, CardHeader, Checkbox, Heading, Input, Stac
 import axios from 'axios'
 import { useState } from 'react'
 import Loading from './Loading'
+import { Link } from 'react-router-dom'
 
 const CreateUserForm: React.FC = () => {
     const id = "ea7aa965-bef1-4c38-b2b3-e62c865b5a7a"
@@ -66,9 +67,12 @@ const CreateUserForm: React.FC = () => {
                 <Button w="50vw" colorScheme='green' variant='solid' onClick={createUsers}>
                     {isLoading && isLoading ? <Loading /> : "Submit"}
                 </Button>
-                <Button w="50vw" colorScheme='blue' variant='solid'>
-                    Back
-                </Button>
+                <Link to={'/manage_user'}>
+                    <Button w="50vw" colorScheme='blue' variant='solid'>
+                        Back
+                    </Button>
+                </Link>
+
 
             </Stack>
         </Box>
