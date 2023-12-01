@@ -1,5 +1,5 @@
 import { EditIcon } from '@chakra-ui/icons'
-import { Box, Button, Card, CardBody, Divider, Flex, Heading, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, SimpleGrid, Stack, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Button, Card, CardBody, Divider, Flex, Grid, GridItem, Heading, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, SimpleGrid, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import ProductDetails from './ProductDetails'
 import { TypesenseItem } from '../type'
@@ -7,15 +7,19 @@ import { Link } from 'react-router-dom'
 
 interface Props {
     hit: TypesenseItem,
+   
 }
 
 const ListProducts = ({ hit }: Props) => {
+    const [products, setProducts] = useState([hit])
+    console.log("columns",products);
+    
     const { isOpen, onOpen, onClose } = useDisclosure()
     const finalRef = React.useRef(null)
 
     return (
         <>
-            <SimpleGrid p="10px" columns={4} spacing={10} minChildWidth="150px">
+            <SimpleGrid p="10px" columns={4} gap={5}>
                 <Box bg="white" >
                     <Card maxW='200px'>
                         <Flex justifyContent="end">
@@ -42,6 +46,9 @@ const ListProducts = ({ hit }: Props) => {
                     </Card>
                 </Box>
             </SimpleGrid>
+            
+
+
             <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>

@@ -29,7 +29,7 @@ const Products = () => {
         <Container display="flex" justifyContent="center" alignItems="center" p="20px">
         <SearchBox />
         </Container>
-        <Hits hitComponent={ListProducts} />
+        <Hits hitComponent={ListProducts}  />
       </InstantSearch>
     </div>
   )

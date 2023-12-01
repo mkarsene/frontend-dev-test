@@ -2,9 +2,10 @@ import { Box, Button, Card, CardBody, CardHeader, Checkbox, Heading, Input, Stac
 import axios from 'axios'
 import { useState } from 'react'
 import Loading from './Loading'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const CreateUserForm: React.FC = () => {
+    const navigate = useNavigate()
     const id = "ea7aa965-bef1-4c38-b2b3-e62c865b5a7a"
     const role = [" MANAGER", "ADMIN", "WAITER", "CASHIER", "RECEIPT_CHECKER"]
     const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -29,6 +30,7 @@ const CreateUserForm: React.FC = () => {
             PIN: pin
         })
             .then(function (response) {
+                navigate('/manage_user')
                 setIsLoading(false)
             })
             .catch(function (error) {

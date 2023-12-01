@@ -1,6 +1,7 @@
 import { Component } from "react";
 
 export interface TypesenseItem {
+    map(arg0: (m: any) => import("react/jsx-runtime").JSX.Element): any;
     find(arg0: (product: any) => boolean): unknown;
     name: string;
     description: string;
