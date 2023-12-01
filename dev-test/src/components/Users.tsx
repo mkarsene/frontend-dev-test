@@ -1,6 +1,7 @@
 import { Box, Card, CardBody, CardHeader, Flex, Heading, Stack, StackDivider, Text } from '@chakra-ui/react'
 import axios from "axios";
 import { useEffect, useState } from 'react';
+import ComponentLoader from './ComponentLoader';
 
 interface Users {
     name: string;
@@ -13,12 +14,15 @@ interface Users {
 
 const Users = () => {
     const [users, setUsers] = useState([])
+    const [isLoading, setIsLoading] = useState<boolean>(false)
     const getAllUsers = async () => {
+        setIsLoading(true)
         axios.get('https://bewty7mih9.execute-api.eu-central-1.amazonaws.com/users', { params: { store_id: "ea7aa965-bef1-4c38-b2b3-e62c865b5a7a", limit: 50 } }
         ).then((res) => {
-            console.log("data", res.data.employees);
             setUsers(res.data.employees)
+            setIsLoading(false)
         }).catch((error) => {
+            setIsLoading(false)
             console.log("error", error);
 
         })
@@ -26,6 +30,10 @@ const Users = () => {
     useEffect(() => {
         getAllUsers()
     }, [])
+
+    if (isLoading) {
+        return (<ComponentLoader />)
+    }
 
 
 
