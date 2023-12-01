@@ -15,6 +15,8 @@ interface Users {
 const Users = () => {
     const [users, setUsers] = useState([])
     const [isLoading, setIsLoading] = useState<boolean>(false)
+    const [errrorMessage, setErrorMessage] = useState<string>("")
+
     const getAllUsers = async () => {
         setIsLoading(true)
         axios.get('https://bewty7mih9.execute-api.eu-central-1.amazonaws.com/users', { params: { store_id: "ea7aa965-bef1-4c38-b2b3-e62c865b5a7a", limit: 50 } }
@@ -23,7 +25,7 @@ const Users = () => {
             setIsLoading(false)
         }).catch((error) => {
             setIsLoading(false)
-            console.log("error", error);
+            setErrorMessage(error.message)
 
         })
     }
@@ -35,12 +37,11 @@ const Users = () => {
         return (<ComponentLoader />)
     }
 
-
-
     return (
         <Box bg="white" p="10px">
             {users.map((user: Users) => (<>
                 <Card w="100vw" mt="30px" >
+                    <Text textAlign="center">{errrorMessage}</Text>
                     <CardHeader>
                         <Heading size='md'>{user.name}</Heading>
                     </CardHeader>
