@@ -10,6 +10,7 @@ import Manageuser from "./pages/Manageuser";
 import Managerthresholds from "./pages/Managerthresholds";
 import { Routes, Route } from "react-router-dom";
 import Products from "./pages/Products";
+import CreateUserForm from "./components/CreateUserForm";
 
 
 export const App = () => (
@@ -20,6 +21,7 @@ export const App = () => (
       <Route path="/" element={ <Products />} />
       <Route path="/manage_user" element={ <Manageuser />} />
       <Route path="/manage_thresholds" element={<Managerthresholds />} />
+      <Route path="/create_user" element={<CreateUserForm />} />
     </Routes>
     </Box>
   </ChakraProvider>
