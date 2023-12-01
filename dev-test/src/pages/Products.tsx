@@ -2,7 +2,7 @@
 // @ts-nocheck
 import TypesenseInstantSearchAdapter from "typesense-instantsearch-adapter";
 import { Hits, InstantSearch, SearchBox } from 'react-instantsearch-dom'
-import ListProducts from "./ListProducts";
+import ListProducts from "../components/ListProducts";
 import { Container } from "@chakra-ui/react";
 
 const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
