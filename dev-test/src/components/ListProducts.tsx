@@ -24,16 +24,9 @@ const ListProducts = ({ hit }: Props) => {
                 <Box bg="white" >
                     <Card maxW='200px'>
                         <Flex justifyContent="end">
-                            <Text>
-                                hello
-                            </Text>
                             <Button onClick={() => { onOpen() }} w="50px" borderRadius="80px" bg="black" color="white">
-                                {/* <Link to={`/product:${hit.id}`}> */}
                                 <EditIcon />
-                                {/* <ProductDetails /> */}
-                                {/* </Link> */}
                             </Button>
-
                         </Flex>
                         <CardBody>
                             <Image
