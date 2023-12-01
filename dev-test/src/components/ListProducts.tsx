@@ -1,9 +1,7 @@
 import { EditIcon } from '@chakra-ui/icons'
 import { Box, Button, Card, CardBody, Divider, Flex, Grid, GridItem, Heading, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, SimpleGrid, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import React, { useState } from 'react'
-import ProductDetails from './ProductDetails'
 import { TypesenseItem } from '../type'
-import { Link } from 'react-router-dom'
 
 interface Props {
     hit: TypesenseItem,
