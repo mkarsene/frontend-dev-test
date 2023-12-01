@@ -10,11 +10,13 @@ const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
         protocol: 'https',
       },
     ],
+    connectionTimeoutSeconds: 1,
+    numRetries: 8,
   },
 
   additionalSearchParameters: {
     query_by: 'name,description',
+    typoTokensThreshold: 1,
   },
 });
 export const searchClient = typesenseInstantsearchAdapter.searchClient;
-
