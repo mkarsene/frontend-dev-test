@@ -7,11 +7,7 @@ import { Link } from 'react-router-dom'
 
 interface Props {
     hit: TypesenseItem,
-    onOpen: () => void
 }
-
-
-
 
 const ListProducts = ({ hit }: Props) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -19,7 +15,6 @@ const ListProducts = ({ hit }: Props) => {
 
     return (
         <>
-
             <SimpleGrid p="10px" columns={4} spacing={10} minChildWidth="150px">
                 <Box bg="white" >
                     <Card maxW='200px'>
@@ -44,21 +39,16 @@ const ListProducts = ({ hit }: Props) => {
                                 <Text fontSize='small'>available: {hit.is_available_for_sale}</Text>
                             </Stack>
                         </CardBody>
-
                     </Card>
                 </Box>
-
             </SimpleGrid>
-
             <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader>Modal Title</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        {/* <Lorem count={2} /> */}
                     </ModalBody>
-
                     <ModalFooter>
                         <Button colorScheme='blue' mr={3} onClick={onClose}>
                             Close
