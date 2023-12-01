@@ -1,8 +1,13 @@
-
+import Navbar from "./Navbar"
+import Search from "./Search"
 
 const Layout = () => {
+
   return (
-    <div>Layout</div>
+    <div>
+      <Navbar />
+      <Search />
+    </div>
   )
 }
 
