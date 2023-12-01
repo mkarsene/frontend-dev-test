@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardBody, CardHeader, Checkbox, Heading, Input, Stack, StackDivider, Text } from '@chakra-ui/react'
+import { Box, Button, Card, CardHeader, Checkbox, Heading, Input, Stack, Text } from '@chakra-ui/react'
 import axios from 'axios'
 import { useState } from 'react'
 import Loading from './Loading'
@@ -42,6 +42,7 @@ const CreateUserForm: React.FC = () => {
     return (
         <Box bg="white" p="10px">
             <Card w="100vw" >
+                <Text textAlign="center" >{errorMessage}</Text>
                 <CardHeader>
                     <Stack spacing={3}>
                         <Heading size='sm'>Name</Heading>

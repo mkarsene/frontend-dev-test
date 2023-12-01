@@ -1,17 +1,15 @@
 import { EditIcon } from '@chakra-ui/icons'
-import { Box, Button, Card, CardBody, Divider, Flex, Grid, GridItem, Heading, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, SimpleGrid, Stack, Text, useDisclosure } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import { Box, Button, Card, CardBody, Divider, Flex,Heading, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, SimpleGrid, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import { TypesenseItem } from '../type'
+import React from 'react'
 
 interface Props {
     hit: TypesenseItem,
-   
 }
 
+
+
 const ListProducts = ({ hit }: Props) => {
-    const [products, setProducts] = useState([hit])
-    console.log("columns",products);
-    
     const { isOpen, onOpen, onClose } = useDisclosure()
     const finalRef = React.useRef(null)
 
@@ -44,9 +42,6 @@ const ListProducts = ({ hit }: Props) => {
                     </Card>
                 </Box>
             </SimpleGrid>
-            
-
-
             <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
@@ -62,7 +57,6 @@ const ListProducts = ({ hit }: Props) => {
                     </ModalFooter>
                 </ModalContent>
             </Modal>
-
         </>
     )
 }

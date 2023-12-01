@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from 'react';
 import ComponentLoader from './ComponentLoader';
 
-interface Users {
+interface User {
     name: string;
     email: string;
     phone_number: number,
@@ -39,7 +39,7 @@ const Users = () => {
 
     return (
         <Box bg="white" p="10px">
-            {users.map((user: Users) => (<>
+            {users.map((user: User) => (<>
                 <Card w="100vw" mt="30px" >
                     <Text textAlign="center">{errrorMessage}</Text>
                     <CardHeader>
