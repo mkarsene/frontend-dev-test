@@ -1,4 +1,5 @@
 import { Button, Flex, Heading } from '@chakra-ui/react'
+import Users from '../components/Users'
 
 const Manageuser = () => {
     return (
@@ -9,6 +10,7 @@ const Manageuser = () => {
             <Flex p="10px">
                 <Button w="100vw" colorScheme='blue'>ADD</Button>
             </Flex>
+            <Users />
         </div>
     )
 }
