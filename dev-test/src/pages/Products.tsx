@@ -7,13 +7,12 @@ import { Container } from "@chakra-ui/react";
 
 const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   server: {
-    apiKey: "leYaJxicJjyC6sIE8djLfSzHo3d5taRH",
+    apiKey: process.env.REACT_APP_API_KEY,
     nodes: [
       {
-        host: "5dbt14p7fze0l6sip-1.a1.typesense.net",
-        path: "", 
-        port: "443",
-        protocol: "https",
+        host: process.env.REACT_APP_HOST,
+        port: process.env.REACT_APP_PORT,
+        protocol: process.env.REACT_APP_PROTOCOL,
       },
     ],
   },
