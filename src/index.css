@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #3778c2;
+  --neutral-color-1: #434b54;
+  --neutral-color-2: #f0f5fa;
+  --neutral-color-3: #aeaeae;
+  --accent-color: #5fb523;
+  --white: #fff;
+  --black: #000;
+  --red: #f00;
+  --font: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--neutral-color-2);
+  font-family: 'Roboto Condensed', sans-serif;
+}
