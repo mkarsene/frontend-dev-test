@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const CreateUserForm: React.FC = () => {
     const navigate = useNavigate()
-    const id = "ea7aa965-bef1-4c38-b2b3-e62c865b5a7a"
+    const id = process.env.REACT_APP_STORE_ID
     const role = [" MANAGER", "ADMIN", "WAITER", "CASHIER", "RECEIPT_CHECKER"]
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [name, setName] = useState<string>("")
