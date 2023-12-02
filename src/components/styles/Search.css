@@ -1,0 +1,48 @@
+/* Search.css */
+.search-card {
+  padding: 20px;
+  background: #f0f5fa;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ais-SearchBox {
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 15rem;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.ais-SearchBox-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid #d6d6e7;
+  border-radius: 8px;
+  box-shadow: none;
+  caret-color: #5a5e9a;
+  color: #23263b;
+  flex: 1 1 0%;
+  font: inherit;
+  max-width: 100%;
+  padding-left: 2.5rem;
+}
+
+.ais-Hits-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.ais-Hits-item {
+  border-radius: 6px;
+  background: #fff;
+  padding: 4px;
+  margin: 0;
+}
