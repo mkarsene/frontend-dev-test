@@ -80,7 +80,8 @@ const Navbar = () => {
     >
       <Flex align="center" ml={5}>
         <Heading as="h1" size="lg" color="#0000ff">
-          Bofrak
+          
+          <Link to="/">Bofrak</Link>
         </Heading>
       </Flex>
 
