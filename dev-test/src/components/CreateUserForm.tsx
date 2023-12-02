@@ -20,7 +20,7 @@ const CreateUserForm: React.FC = () => {
 
     const createUsers = async () => {
         setIsLoading(true)
-        axios.post("https://bewty7mih9.execute-api.eu-central-1.amazonaws.com/users", {
+        axios.post(`${process.env.REACT_APP_BASE_URL}/users`, {
             roles: ["ADMIN"],
             name: name,
             phone_number: phone_number,
