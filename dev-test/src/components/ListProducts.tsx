@@ -1,5 +1,5 @@
 import { EditIcon } from '@chakra-ui/icons'
-import { Box, Button, Card, CardBody, Divider, Flex,Heading, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, SimpleGrid, Stack, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Button, Card, CardBody, Divider, Flex, Heading, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, SimpleGrid, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import { TypesenseItem } from '../type'
 import React from 'react'
 
@@ -23,7 +23,7 @@ const ListProducts = ({ hit }: Props) => {
                         </Flex>
                         <CardBody>
                             <Image
-                                src={`https://dghhemym84nng.cloudfront.net/bofrak-uploads/${hit.sku}.png`}
+                                src={`${process.env.REACT_APP_IMAGE_BASE_URL}/${hit.sku}.png`}
                                 alt={hit.name}
                                 borderRadius='lg'
                             />
