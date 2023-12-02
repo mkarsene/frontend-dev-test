@@ -5,7 +5,6 @@ import Login from '../Auth/Login'
 const Navbar = () => {
   return (
     <Flex bg="gray.200" as="nav" p="10px" alignItems="center" gap="10px">
-      <Login />
       <Heading as="h1" color="blue"> <Link to={'/'}>
         Bofrak
       </Link></Heading>
@@ -27,7 +26,7 @@ const Navbar = () => {
           </MenuItem>
         </MenuList>
       </Menu>
-      <Button bg="black" color="white">Logout</Button>
+      <Login />
     </Flex>
   )
 }
