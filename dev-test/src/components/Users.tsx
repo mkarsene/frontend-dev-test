@@ -19,7 +19,7 @@ const Users = () => {
 
     const getAllUsers = async () => {
         setIsLoading(true)
-        axios.get('https://bewty7mih9.execute-api.eu-central-1.amazonaws.com/users', { params: { store_id: "ea7aa965-bef1-4c38-b2b3-e62c865b5a7a", limit: 50 } }
+        axios.get(`${process.env.REACT_APP_BASE_URL}/users`, { params: { store_id: "ea7aa965-bef1-4c38-b2b3-e62c865b5a7a", limit: 50 } }
         ).then((res) => {
             setUsers(res.data.employees)
             setIsLoading(false)
