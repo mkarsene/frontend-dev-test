@@ -1,8 +1,7 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-import { Button, Input, InputGroup, InputRightElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Select, useDisclosure } from '@chakra-ui/react'
+import { Button, Input, InputGroup, InputRightElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Select, Text, useDisclosure } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
+import Loading from '../components/Loading';
 
 interface User {
     id: string;
@@ -21,9 +20,6 @@ const Login = () => {
 
     const handleClick = () => setShow(!show)
 
-
-
-
     const getAllUsers = async () => {
         setIsLoading(true)
         axios.get('https://bewty7mih9.execute-api.eu-central-1.amazonaws.com/users', { params: { store_id: "ea7aa965-bef1-4c38-b2b3-e62c865b5a7a", limit: 50 } }
@@ -41,44 +37,33 @@ const Login = () => {
     }, [])
 
 
-    const getUserId = (user: User) => {
-        const id = localStorage.setItem("userId", JSON.stringify(user.id))
-
-        console.log("id", id);
-
-    }
-
     const verifyUser = () => {
+        setIsLoading(true)
         axios.post("https://bewty7mih9.execute-api.eu-central-1.amazonaws.com/users/verify", {
             id: loginUserId,
             PIN: "1234"
         })
             .then(function (response) {
-                console.log("response", response);
-
+                setIsLoading(false)
             })
             .catch(function (error) {
-                console.log(error);
-
+                setErrorMessage(error.message)
+                setIsLoading(false)
             })
     }
-    // @ts-ignore
-    const handleChange = (event) => {
-        setLoginUserId(event.target.value)
-    }
+
+
     return (
         <div>
             <Button bg="black" color="white" onClick={onOpen}>Login</Button>
-
             <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader>Enter Password</ModalHeader>
+                    <Text p="10px" color="red.600">{errrorMessage}</Text>
                     <Select placeholder='Select User' p="10px">
                         {users.map((user: User) => (
-
-                            <option value={loginUserId} onChange={handleChange}  >{user.name}</option>
-
+                            <option value={loginUserId} onClick={() => setLoginUserId(user.id)}  >{user.name}</option>
                         ))}
                     </Select>
 
@@ -104,7 +89,9 @@ const Login = () => {
                         <Button colorScheme='red' mr={3} onClick={onClose}>
                             Close
                         </Button>
-                        <Button colorScheme='green' onClick={verifyUser} >Validate</Button>
+                        <Button colorScheme='green' onClick={verifyUser} >
+                            {isLoading ? (<Loading />) : "Validate"}
+                        </Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
